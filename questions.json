@@ -1,0 +1,31 @@
+[
+  {
+    "type": "mcq",
+    "timeLimitSec": 15,
+    "data": {
+      "prompt": "HTMLで最も大きい見出し要素は？",
+      "choices": ["<h6>", "<h1>", "<header>", "<title>"],
+      "correctIndex": 1
+    }
+  },
+  {
+    "type": "order",
+    "timeLimitSec": 25,
+    "data": {
+      "prompt": "次の出来事を古い順に並べ替えなさい",
+      "items": ["CSS3 勧告", "HTML5 勧告", "ES2015（ES6）", "Flexbox 勧告"],
+      "answer": [1, 0, 2, 3]
+    }
+  },
+  {
+    "type": "video-buzz",
+    "timeLimitSec": 30,
+    "data": {
+      "prompt": "この映像のテーマ（作品名）を答えてください（分かったら早押し）",
+      "videoSrc": "/media/sample.mp4",
+      "buzzHint": "ヒント：BGMにも注目！",
+      "answers": ["sample answer", "サンプルアンサー"],
+      "revealText": "Sample Answer（サンプルアンサー）"
+    }
+  }
+]
