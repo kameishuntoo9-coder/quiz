@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realtime Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>🎮 Realtime Quiz</h1>
+
+    <section id="setup">
+      <div class="card">
+        <h2>ルーム作成</h2>
+        <input id="hostName" placeholder="ホスト名" />
+        <button id="createBtn">ルームを作成</button>
+      </div>
+      <div class="card">
+        <h2>ルーム参加</h2>
+        <input id="joinName" placeholder="プレイヤー名" />
+        <input id="roomId" placeholder="ルームID（例: ABC123）" />
+        <button id="joinBtn">参加する</button>
+      </div>
+    </section>
+
+    <section id="lobby" class="hidden">
+      <div class="card">
+        <h2>ロビー</h2>
+        <p>ルームID: <span id="labelRoomId"></span></p>
+        <ul id="playerList"></ul>
+        <button id="startBtn" class="hidden">ゲーム開始</button>
+        <p class="hint">このURLを共有: <span id="shareUrl"></span></p>
+      </div>
+    </section>
+
+    <section id="game" class="hidden">
+      <div class="card">
+        <div id="progress"></div>
+        <h2 id="prompt">…</h2>
+        <div id="choices" class="choices"></div>
+        <div class="meta">
+          <span>残り <span id="timer">--</span> 秒</span>
+        </div>
+        <div id="reveal" class="hidden"></div>
+        <div id="leaderboard"></div>
+        <button id="nextBtn" class="hidden">次の問題へ</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
